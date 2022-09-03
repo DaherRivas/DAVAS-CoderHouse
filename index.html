@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAVAS Electronic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Source+Sans+Pro:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>¡Bienvenidos a DAVAS Electronic!</h1>
+    <h3>Estamos ubicados en Once, CABA</h3>
+  </header>
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">DAVAS ELECTRONIC</a>
+      <button id="navbarButton" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Novedades</a>
+          <a class="nav-link" href="#">Pricing</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PRODUCTOS -->
+  <div class="container">
+    <div id="products">
+      <h1>¡Productos en Stock!</h1>
+    </div>
+    <div class="container">
+      <div class="row d-flex row-cols-sm-1 row-cols-md-2 justify-content-around row-cols-lg-3 row-cols-xl-4 "
+        id="cards">
+      </div>
+    </div>
+    <div id="surprise">
+      <button type="button" class="btn btn-warning">¿Estás listo para esta bomba?</button>
+    </div>
+  </div>
+  <!-- LISTA DONDE SE MUESTRAN LOS PRODUCTOS SELECCIONADOS-->
+  <div class="cartShopping">
+    <div class="row">
+      <table id="products-list">
+        <thead class="table-dark">
+          <tr>
+            <th>IMAGEN</th>
+            <th>PRODUCTOS</th>
+            <th>PRECIO</th>
+            <th>CANTIDAD</th>
+            <th>ELIMINAR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+          </tr>
+        </tbody>
+      </table>
+      <div class="container">
+        <div class="col-12 container__flex cart">
+          <h3 id="total-amount"></h3>
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-danger" id="emptyCart">VACIAR CARRITO</button>
+          <button type="button" class="btn btn-success" id="confirmPurchase">CONFIRMAR COMPRA</button>
+        </div>
+      </div>
+    </div>
+    <!-- FORMULARIO -->
+    <form id="form" method="POST" action="#">
+      <div class="form-style">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nombre</label><br>
+          <input type="text" class="form-control" placeholder="Ingrese su Nombre" name="client" required><br>
+          <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label><br>
+          <input type="email" class="form-control" placeholder="ejemplo@gmail.com" name="client-email" required><br>
+          <label for="exampleFormControlTextarea1" class="form-label">En este campo, puedes anotar especificaciones
+            para
+            tus productos,
+            como por ejemplo: elegir los colores, cómo quieres que sean entregados tus productos, etc. ¡Muchas gracias
+            por confiar en DAVAS Electronic!
+          </label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea><br>
+          <button type="submit" class="btn btn-dark" id="send-data">Finalizar Compra</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./main.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+      emailjs.init("mA8m8aAhwSibDa2aq");
+</script>
+    <script>
+      const btn = document.getElementById('send-data');
+      document.getElementById('form')
+        .addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          btn.value = 'Sending...';
+
+          const serviceID = 'default_service';
+          const templateID = 'template_31iaafj';
+
+          emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+              btn.value = 'Send Email';
+              alert('Sent!');
+            }, (err) => {
+              btn.value = 'Send Email';
+              alert(JSON.stringify(err));
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

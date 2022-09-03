@@ -1,0 +1,50 @@
+[
+    {
+        "image": "https://d2r9epyceweg5n.cloudfront.net/stores/243/255/products/carga-malibu1-c2711866d08732b4f815870659611743-640-0.jpg",
+        "name": "Malibu Micro USB V8",
+        "price": "1100",
+        "id": 1
+    },
+    {
+        "image": "https://ultratecno.ar/wp-content/uploads/2021/05/photo_2021-05-11_15-34-0211-cbed97cedc083ec8ad16209164792447-640-0.jpg",
+        "name": "Adaptador iPhone 20W USB-C",
+        "price": "2800",
+        "id": 2
+    },
+    {
+        "image": "https://http2.mlstatic.com/D_NQ_NP_750005-MPE49316432822_032022-O.jpg",
+        "name": "Cargador Xiaomi 20W Type-C",
+        "price": "2600",
+        "id": 3
+    },
+    {
+        "image": "https://d2r9epyceweg5n.cloudfront.net/stores/256/529/products/plumcot-27-ar-retail-box1-4b3a5b5d8a2e88dcdb16321661188550-640-0.jpg",
+        "name": "Cargador Motorola Turbo Power 18W",
+        "price": "10000",
+        "id": 4
+    },
+    {
+        "image": "https://i0.wp.com/www.aslanstoreuy.com/wp-content/uploads/2022/05/Teclado-Mecanico-ASUS-ROG-Strix-Scope-TKL-Aslan-Store-Uruguay.jpg?fit=600%2C600&ssl=1",
+        "name": "Teclado Mécanico Gamer ASUS",
+        "price": "23500",
+        "id": 5
+    },
+    {
+        "image": "https://http2.mlstatic.com/D_NQ_NP_943255-MLA44323974983_122020-O.webp",
+        "name": "Auricular Gamer GTC HSG-603",
+        "price": "5399",
+        "id": 6
+    },
+    {
+        "image": "https://http2.mlstatic.com/D_NQ_NP_851315-MLA31886226765_082019-O.jpg",
+        "name": "Mouse Gamer Logitech G502",
+        "price": "5500",
+        "id": 7
+    },
+    {
+        "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/927/products/jajeido2711-1a924c0d079072d1ad16476042407406-640-0.jpg",
+        "name": "Combo Gamer GTC",
+        "price": "8000",
+        "id": 8
+    }
+]

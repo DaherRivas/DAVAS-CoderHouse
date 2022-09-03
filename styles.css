@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    color: rgba(160, 221, 225, 0.8) ;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    border-radius: 5rem;
+    padding: 2rem;
+}
+
+.navbar-brand {
+    color: rgba(8,79,141,255);
+}
+
+.nav-link, .nav-link-active{
+    color: #ffffff;
+}
+
+
+.row{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+    row-gap: 50px;
+}
+
+
+.card {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    max-width: 300px;
+    margin: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(16,12,91,1) 0%, rgba(74,82,163,0.8995973389355743) 35%, rgba(7,188,224,1) 100%);;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+}
+
+.card * {
+    box-sizing: border-box;
+    transition: 400ms;
+}
+
+.card-img  {  
+    display: block;
+    width: 85%;
+
+}
+
+.card-title {
+    text-align: center;
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 400px;
+}
+
+.card-text {
+    position: absolute;
+    right: 32px;
+    bottom :48px;
+    left: 32px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.80rem;
+    opacity: 0;
+}
+
+
+.card:hover .card-img {
+    transform: translate(-16px, -42px) rotate(-16deg) scale(1.0);
+}
+
+
+.card:hover .card-text {
+    opacity: 1;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.delete-product {
+    color: red;
+
+    
+}
+
+.form-style { 
+    margin-left: 70px;
+    margin-right: 90px;
+    width: 90%;   
+
+}
+
+.quantity-input {
+    width: 20%;
+    background-color: rgba(160, 221, 225, 0.8);
+}
+
+table, td, th {
+    border: 2px dotted #008F11;
+  }
